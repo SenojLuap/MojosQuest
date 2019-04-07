@@ -18,5 +18,6 @@ func _physics_process(delta) :
 		momentum.x = -PlayerGlobals.WALK_SPEED
 	else:
 		momentum.x = 0
+	
 	move_and_slide(momentum, Globals.FLOOR_NORMAL)
 	
