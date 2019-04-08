@@ -8,15 +8,32 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "Stage",
+"language": "GDScript",
+"path": "res://Stage.gd"
+}, {
+"base": "StaticBody2D",
+"class": "TunaCan",
+"language": "GDScript",
+"path": "res://TunaCan.gd"
+}, {
+"base": "Position2D",
+"class": "TunaCanSpawnPos",
+"language": "GDScript",
+"path": "res://TunaCanSpawnPos.gd"
+} ]
 _global_script_class_icons={
-
+"Stage": "",
+"TunaCan": "",
+"TunaCanSpawnPos": ""
 }
 
 [application]
 
 config/name="Mojo's Quest"
-run/main_scene="res://TestScene.tscn"
+run/main_scene="res://Stage1.tscn"
 config/icon="res://icon.png"
 
 [autoload]
