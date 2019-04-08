@@ -7,6 +7,9 @@ var TunaCans = 0
 
 export var MaxTuna = 2
 
+func _ready():
+	randomize()
+
 func player_get_tuna(tuna : TunaCan):
 	TunaSpawnLocs.append(tuna.position)
 	remove_child(tuna)
