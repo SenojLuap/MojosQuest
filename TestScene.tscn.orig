@@ -1,9 +1,15 @@
-[gd_scene load_steps=5 format=2]
+<<<<<<< HEAD
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://TestScene.gd" type="Script" id=1]
+[ext_resource path="res://Actors/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://res/TileSets/StoneTile.tres" type="TileSet" id=3]
+=======
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://res/TileSets/StoneTile.tres" type="TileSet" id=1]
 [ext_resource path="res://TunaCanSpawnPos.gd" type="Script" id=2]
-[ext_resource path="res://TestScene.gd" type="Script" id=3]
-[ext_resource path="res://Actors/player.tscn" type="PackedScene" id=4]
+>>>>>>> master
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
