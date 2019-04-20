@@ -1,10 +1,11 @@
 extends KinematicBody2D
 
-var momentum := Vector2.ZERO;
+onready var graphics := $Graphics;
 
+var momentum := Vector2.ZERO;
 var pounce_start : int = 0;
 
-func _physics_process(delta) :
+func _physics_process(delta) -> void:
 	momentum.x = 0;
 	var snap_vec := Vector2.DOWN * 8;
 	var pouncing := false;
@@ -37,4 +38,8 @@ func _physics_process(delta) :
 	if (pouncing):
 		momentum.x *= .25;
 	move_and_slide_with_snap(momentum, snap_vec, Vector2.UP);
+	if (momentum.x > 0):
+		graphics.transform.x = Vector2(1, 0);
+	elif (momentum.x < 0):
+		graphics.transform.x = Vector2(-1, 0);
 	
